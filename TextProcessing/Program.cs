@@ -6,6 +6,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
+/* 
+ * This program is designed to take a text file and split it up into individual words.
+ * It takes an input of the file path of the text file, and outputs the words and how namy times they occured, followed by the total amount of unique words.
+ */
+
 namespace TextProcessing
 {
     internal class Program
@@ -47,7 +52,7 @@ namespace TextProcessing
 
             // Output word counts
             Console.WriteLine("\n Word occurrences:");
-            foreach (var pair in wordCounts.OrderBy(p=>p.Key))
+            foreach (var pair in wordCounts.OrderBy(p => p.Key))
             {
                 Console.WriteLine($"{pair.Key}: {pair.Value}");
             }
@@ -55,6 +60,6 @@ namespace TextProcessing
             Console.WriteLine($"\nTotal number of unique words: {wordCounts.Count}");
             Console.ReadKey();
         }
-       
+
     }
 }
